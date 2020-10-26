@@ -1,0 +1,11 @@
+.root {
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+    grid-template-columns: min-content min-content;
+}
+
+.prev,
+.next {
+    /**/
+}
