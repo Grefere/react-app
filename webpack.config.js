@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const {DefinePlugin} = require('webpack');
 const path = require('path');
 
 module.exports = {
@@ -45,6 +46,9 @@ module.exports = {
         publicPath: '/'
     },
     plugins: [
+        new DefinePlugin({
+            GITHUB_TOKEN: JSON.stringify(process.env.GITHUB_TOKEN),
+        }),
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'public', 'index.html'),
             minify: {

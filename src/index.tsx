@@ -6,12 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Route} from 'react-router-dom';
 import {ApolloProvider, ApolloClient, InMemoryCache, createHttpLink} from '@apollo/client';
 
-const token = '961b7a63ac8ee99f872a4bc096faacecf60143dc';
+declare var GITHUB_TOKEN: string;
 
 const apolloLink = createHttpLink({
     uri: 'https://api.github.com/graphql',
     headers: {
-        authorization: `Bearer ${token}`
+        authorization: `Bearer ${GITHUB_TOKEN}`
     }
 });
 
