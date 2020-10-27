@@ -1,9 +1,9 @@
 import {useLocation, useHistory} from 'react-router-dom';
 import {useCallback, useEffect, useMemo, useState} from 'react';
 import {useLazyQuery} from '@apollo/client';
-import REPOSITORY_OWNER_QUERY from '../queries/repositoryOwner.gql';
-import {SearchFormData} from '../models/form';
-import {RepositoryOwner, RepositoryResponse, SearchMode} from '../models/repository';
+import REPOSITORY_OWNER_QUERY from '@queries/repositoryOwner.gql';
+import {SearchFormData} from '@models/form';
+import {RepositoryOwner, RepositoryResponse, SearchMode} from '@models/repository';
 
 const SHOW_PER_PAGE = 10;
 

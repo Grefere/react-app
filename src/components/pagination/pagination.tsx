@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
-import classes from './pagination.scss';
-import {PageInfo} from '../../models/repository';
-import {usePagination} from '../../talons/usePagination';
+import classes from './pagination.css';
+import {PageInfo} from '@models/repository';
+import {usePagination} from '@talons/usePagination';
 
 export interface Props {
     pageInfo: PageInfo;
@@ -21,7 +21,7 @@ const Pagination: FC<Props> = (props) => {
         pageInfo
     });
 
-    return (
+    return (pageInfo.hasPreviousPage || pageInfo.hasNextPage) ? (
         <div className={classes.root}>
             {pageInfo.hasPreviousPage && (
                 <button
@@ -45,7 +45,7 @@ const Pagination: FC<Props> = (props) => {
                 </button>
             )}
         </div>
-    );
+    ) : null;
 };
 
 export default Pagination;

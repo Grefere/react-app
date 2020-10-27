@@ -1,0 +1,48 @@
+.root {
+    overflow-x: auto;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table th {
+    border-bottom: 2px solid var(--ge0);
+}
+
+.table td {
+    border-bottom: 1px solid var(--ge0);
+    vertical-align: top;
+}
+
+.table td,
+.table th {
+    font-size: 0.75rem;
+    padding: 0.5rem;
+}
+
+.name a {
+    color: var(--g4f);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.name a:hover {
+    color: var(--green);
+}
+
+.name {
+    min-width: 8rem;
+}
+
+.description {
+    min-width: 12rem;
+}
+
+.isFork,
+.date,
+.pullRequests,
+.issues {
+    min-width: 6rem;
+}

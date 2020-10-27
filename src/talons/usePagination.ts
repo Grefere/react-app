@@ -1,5 +1,5 @@
 import {useCallback} from 'react';
-import {PageInfo, SearchMode} from '../models/repository';
+import {PageInfo, SearchMode} from '@models/repository';
 import {useHistory, useLocation} from 'react-router-dom';
 
 export interface Props {

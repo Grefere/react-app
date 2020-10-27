@@ -1,0 +1,25 @@
+.root {
+    border-bottom: 1px solid var(--ge0);
+    margin-bottom: 1rem;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.form {
+    margin: 0 auto;
+    max-width: 30rem;
+}
+
+.input {
+    text-align: center;
+}
+
+.field {
+    padding-bottom: 1rem;
+}
+
+.label {
+    display: block;
+    font-weight: 700;
+    padding-bottom: 0.25rem;
+}

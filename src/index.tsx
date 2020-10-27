@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
+import './index.css';
 import App from './app';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Route} from 'react-router-dom';
 import {ApolloProvider, ApolloClient, InMemoryCache, createHttpLink} from '@apollo/client';
 
-const token = '2f120ddcd47c872a5b3da7d46e60013bc5f5ba1c';
+const token = '961b7a63ac8ee99f872a4bc096faacecf60143dc';
 
 const apolloLink = createHttpLink({
     uri: 'https://api.github.com/graphql',

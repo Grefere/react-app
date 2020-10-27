@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
-import classes from './results.scss';
-import {Repository} from '../../models/repository';
+import classes from './results.css';
+import {Repository} from '@models/repository';
 
 export interface Props {
     repositories: Array<Repository>;
@@ -12,7 +12,7 @@ const Results: FC<Props> = (props) => {
 
     return (
         <div className={classes.root}>
-            <table>
+            <table className={classes.table}>
                 <thead>
                     <tr>
                         <th>{'Name'}</th>
@@ -27,21 +27,21 @@ const Results: FC<Props> = (props) => {
                 <tbody>
                     {repositories.map((repository, index) => (
                         <tr key={`repository-${index}`}>
-                            <td>
+                            <td className={classes.name}>
                                 <a href={repository.url} target={'_blank'} rel={'noreferrer'}>
                                     <span>{repository.name}</span>
                                 </a>
                             </td>
 
-                            <td>
+                            <td className={classes.description}>
                                 <div dangerouslySetInnerHTML={{
                                     __html: repository.shortDescriptionHTML
                                 }} />
                             </td>
 
-                            <td>{repository.isFork ? 'Yes' : 'No'}</td>
+                            <td className={classes.isFork}>{repository.isFork ? 'Yes' : 'No'}</td>
 
-                            <td>
+                            <td className={classes.date}>
                                 {repository.commitComments.length ? (
                                     repository.commitComments[0].nodes.createdAt
                                 ) : (
@@ -49,8 +49,8 @@ const Results: FC<Props> = (props) => {
                                 )}
                             </td>
 
-                            <td>{repository.issues.totalCount}</td>
-                            <td>{repository.pullRequests.totalCount}</td>
+                            <td className={classes.issues}>{repository.issues.totalCount}</td>
+                            <td className={classes.pullRequests}>{repository.pullRequests.totalCount}</td>
                         </tr>
                     ))}
                 </tbody>
