@@ -18,6 +18,9 @@ module.exports = {
             '@talons': path.resolve(__dirname, 'src/talons/')
         }
     },
+    devServer: {
+        port: 3000
+    },
     module: {
         rules: [
             {
